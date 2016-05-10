@@ -1,6 +1,6 @@
 # jake.pubpub.org
 
-This repo is the simple heroku deployment of jake.pubpub.org.
+This repo is our simple heroku deployment of jake.pubpub.org.
 
 Jake is our server which runs [Thumbor](https://github.com/thumbor/thumbor) for resizing and editing images on the fly.
 
@@ -29,7 +29,7 @@ assets.pubpub.org (CNAME)
      fileserver (S3)
 ``` 
 
-The resizing service sv
+The resizing service:
 ```
     CDN (Cloudflare)
 -------------------------
