@@ -22,18 +22,18 @@ Our assets infrastucture has two main components: an 'originals' fileserver, and
 
 The originals fileserver:
 ```
-    CDN (Cloudflare)
------------------------
-assets.pubpub.org CNAME
------------------------
-    fileserver (S3)
+     CDN (Cloudflare)
+-------------------------
+assets.pubpub.org (CNAME)
+-------------------------
+     fileserver (S3)
 ``` 
 
 The resizing service sv
 ```
     CDN (Cloudflare)
------------------------
-    jake.pubpub.org
------------------------
-      Thumbor
+-------------------------
+    jake.pubpub.org 
+-------------------------
+       Thumbor
 ```
