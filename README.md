@@ -22,7 +22,9 @@ Our assets infrastucture has two main components: an 'originals' fileserver, and
 
 The originals fileserver:
 ```
-     CDN (Cloudflare)
+  DNS + CDN (Cloudflare)
+-------------------------
+    CDN (CloudFront)
 -------------------------
 assets.pubpub.org (CNAME)
 -------------------------
@@ -37,6 +39,8 @@ The resizing service:
 -------------------------
        Thumbor
 ```
+
+The originals fileserver is behind two layers of CDN because S3 alone does not provide what's needed to have a custom domain with SSL. That is, we can't make https://assets.pubpub.org work without using the SSL provided by Cloudfront. Cloudflare in this case behaves more or less as a DNS provider allowing us to CNAME assets.pubpub.org to our Cloudflare URL. The added layer of CDN doesn't hurt anything.
 
 # Setup
 
