@@ -37,3 +37,14 @@ The resizing service:
 -------------------------
        Thumbor
 ```
+
+# Setup
+
+```
+heroku create
+heroku buildpacks:set heroku/python
+heroku buildpacks:add https://github.com/jc4p/heroku-buildpack-gifsicle.git
+git push heroku master
+heroku scale web=1
+
+```
