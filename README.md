@@ -52,3 +52,10 @@ git push heroku master
 heroku scale web=1
 
 ```
+
+Herokus cache seems to fail with gifsicle on each new build (the original build works fine).
+
+To clear the Heroku cache:
+```
+heroku repo:purge_cache -a <app-name>
+```
